@@ -1,9 +1,27 @@
 @import "tailwindcss";
 
+
+
+/* @import "tw-animate-css"; */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-playfair: 'Playfair Display', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
 }
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #0f172a;
+}
+
+.font-serif { font-family: var(--font-playfair); }
+
+.brutalist-border { border: 2px solid #111; }
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +30,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  /* Contorno para o menu (mix blend) */
+  .text-stroke-blend {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  /* Bônus: Aquele texto vazado estilo revista de arquitetura */
+  .text-stroke-black {
+    -webkit-text-stroke: 1px #000;
+    /* color: transparent; */
+  }
+  
+  .text-stroke-white {
+    -webkit-text-stroke: 1px #fff;
+    /* color: transparent; */
+  }
 }

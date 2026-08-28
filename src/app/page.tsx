@@ -1,23 +1,34 @@
-import Link from 'next/link';
 import projects from '../data/projects';
 import HeroCarousel from '../components/layout/HeroCarousel';
+import ProcessSection from '../components/layout/ProcessSection';
+import TimelineSection from '../components/layout/TimelineSection';
+import ProjectList from '../components/projects/ProjectList';
+import ContactSection from '../components/layout/ContactSection';
 
 export default function Home() {
-  const hero = projects[0];
-  const heroImages = [hero.coverImage, ...hero.gallery.map(g => g.url)];
 
   return (
-    <section className="h-screen relative w-full flex items-end">
-      <HeroCarousel images={heroImages} />
-      <div className="absolute inset-0 bg-black/30" />
+    <>
+      <section className="h-dvh relative w-full flex items-end snap-start">
+        <HeroCarousel hero={projects} />
+        
+      </section>
 
-      <div className="pb-12 px-6 md:px-12">
-        <h1 className="text-white text-6xl md:text-8xl font-serif">{hero.title}</h1>
-        <p className="text-white/90 mt-4 max-w-prose">{hero.description}</p>
-        <div className="mt-8">
-          <Link href={`/projetos/${hero.slug}`} className="inline-block px-8 py-4 bg-white text-black/90 uppercase text-sm tracking-widest font-semibold hover:bg-zinc-200 transition-colors">Explorar Obra</Link>
-        </div>
+      <ProcessSection />
+
+      <TimelineSection />
+
+      <div id="projetos" className="snap-start px-6 md:px-12 py-20 md:py-28">
+        <header className="mb-10">
+          <h2 className="text-3xl md:text-5xl font-serif">Projetos</h2>
+          <p className="text-zinc-600 mt-3 max-w-prose">
+            Clique em um projeto para expandir e ver o estudo completo.
+          </p>
+        </header>
+        <ProjectList items={projects} />
       </div>
-    </section>
+
+      <ContactSection />
+    </>
   );
 }
