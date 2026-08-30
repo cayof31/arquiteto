@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import { projects } from '../../../data/projects';
 import ProjectHero from '../../../components/projects/ProjectHero';
+import ProgressiveImage from '../../../components/ui/ProgressiveImage';
 
 type Props = { params: Promise<{ slug: string }> };
-
-// blur 8x8 cinza claro — evita flash branco enquanto carrega com lazy
-const BLUR_PLACEHOLDER =
-  'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAALABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAA8A/9k=';
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
@@ -62,15 +59,12 @@ export default async function ProjectPage({ params }: Props) {
             if (block.type === 'image') {
               return (
                 <div key={i} className={`overflow-hidden ${block.image.span || ''}`}>
-                  <Image
+                  <ProgressiveImage
                     src={block.image.url}
                     alt={block.image.alt}
-                    sizes="100vw"
-                    quality={90}
                     width={1920}
                     height={1280}
-                    placeholder="blur"
-                    blurDataURL={BLUR_PLACEHOLDER}
+                    sizes="100vw"
                     className="object-cover w-full h-auto"
                   />
                   {block.image.caption && (
@@ -85,15 +79,12 @@ export default async function ProjectPage({ params }: Props) {
                 <div key={i} className={`grid ${gridCols} gap-4`}>
                   {block.images.map((img, idx) => (
                     <div key={idx} className="overflow-hidden">
-                      <Image
+                      <ProgressiveImage
                         src={img.url}
                         alt={img.alt}
-                        sizes="(max-width:768px) 100vw, 50vw"
-                        quality={90}
-                        placeholder="blur"
-                        blurDataURL={BLUR_PLACEHOLDER}
                         width={1200}
                         height={800}
+                        sizes="(max-width:768px) 100vw, 50vw"
                         className="object-cover w-full h-auto"
                       />
                       {img.caption && (
@@ -118,14 +109,11 @@ export default async function ProjectPage({ params }: Props) {
             {project.plans.map((plan, idx) => (
               <div key={idx} className="bg-zinc-800 p-4 rounded border border-zinc-700">
                 <div className="relative aspect-video w-full overflow-hidden rounded">
-                  <Image
+                  <ProgressiveImage
                     src={plan.url}
                     alt={plan.alt}
-                    sizes="(max-width:768px) 100vw, 50vw"
-                    quality={90}
-                    placeholder="blur"
-                    blurDataURL={BLUR_PLACEHOLDER}
                     fill
+                    sizes="(max-width:768px) 100vw, 50vw"
                     className="object-contain"
                   />
                 </div>
