@@ -70,13 +70,13 @@ export default function HeroCarousel({ hero }: HeroCarouselProps) {
         onDragEnd={handleDragEnd}
       >
         {hero.map((src, i) => (
-          <div key={i} className="relative min-w-full h-full shrink-0">
+          <div key={i} className="min-w-full w-[100%] h-dvh relative flex items-center shrink-0 snap-start">
             <Image
               src={src.coverImage}
               alt={`Projeto ${i + 1}`}
               fill
               sizes="100vw"
-              quality={90}
+              // quality={90}
               className="object-cover select-none"
               priority={i === 0}
               draggable={false}

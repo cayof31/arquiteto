@@ -65,7 +65,7 @@ export default function ProcessSection() {
                 alt={activeStep.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                quality={90}
+                // quality={90}
                 className="object-cover"
                 priority
               />

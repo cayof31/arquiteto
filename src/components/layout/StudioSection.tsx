@@ -11,7 +11,7 @@ export default function StudioSection() {
           alt="Studio"
           fill
           sizes="100vw"
-          quality={90}
+          // quality={90}
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />

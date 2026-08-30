@@ -78,7 +78,7 @@ const peekRatio = -5; // % da largura de um slide que sobra do anterior ao fim
                   alt={m.title}
                   fill
                   sizes="100vw"
-                  quality={90}
+                  // quality={90}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/50" />
