@@ -1,5 +1,44 @@
 import type { ArchitectureProject, ProjectImage } from '../types/project';
 
+
+export const images = [
+  "/projects/communalWarehouseProject/1.jpg",
+  "/projects/communalWarehouseProject/2.jpg",
+  "/projects/communalWarehouseProject/3.jpg",
+  "/projects/communalWarehouseProject/4.jpg",
+  "/projects/communalWarehouseProject/5.jpg",
+  "/projects/communalWarehouseProject/6.jpg",
+  "/projects/communalWarehouseProject/7.jpg",
+  "/projects/communalWarehouseProject/8.jpg",
+  "/projects/communalWarehouseProject/9.jpg",
+  "/projects/communalWarehouseProject/10.jpg",
+  "/projects/communalWarehouseProject/11.jpg",
+  "/projects/communalWarehouseProject/12.jpg",
+  "/projects/communalWarehouseProject/13.jpg",
+  "/projects/communalWarehouseProject/14.jpg",
+  "/projects/communalWarehouseProject/15.jpg",
+  "/projects/communalWarehouseProject/16.jpg",
+  "/projects/communalWarehouseProject/17.jpg",
+  "/projects/communalWarehouseProject/18.jpg",
+  "/projects/communalWarehouseProject/19.jpg",
+  "/projects/communalWarehouseProject/20.jpg",
+  "/projects/communalWarehouseProject/21.jpeg",
+  "/projects/communalWarehouseProject/22.jpeg",
+  "/projects/communalWarehouseProject/23.jpeg",
+  "/projects/communalWarehouseProject/24.jpeg",
+];
+
+export const imagesPlan = [
+  "/projects/communalWarehouseProject/1_planta.jpg",
+  "/projects/communalWarehouseProject/2_planta.jpg",    
+  "/projects/communalWarehouseProject/3_planta.jpg",    
+  "/projects/communalWarehouseProject/4_planta.jpg",    
+  "/projects/communalWarehouseProject/5_planta.jpg",    
+  "/projects/communalWarehouseProject/6_planta.jpg",    
+  "/projects/communalWarehouseProject/7_planta.jpeg",    
+
+]
+
 export const communalWarehouseProject: ArchitectureProject = {
   slug: 'armazem-comunitario-medellin-yemail-arquitectura',
   title: 'Armazém Comunitário Medellín',
@@ -7,7 +46,7 @@ export const communalWarehouseProject: ArchitectureProject = {
   year: 2020,
   location: 'Medellín, Colômbia',
   coverImage:
-    'https://images.adsttc.com/media/images/5f87/b2b0/63c0/1777/3a00/07c3/large_jpg/Alejandro_Arango__(5).jpg?1602728616',
+    images[0],
   description:
     'Reconversão de um antigo galpão industrial no bairro de Manila em um espaço de coworking e cafeteria colaborativa, recuperando a volumetria de pé-direito duplo e tesouras de madeira com novos mezaninos e jardins triangulares.',
   source: {
@@ -30,15 +69,45 @@ export const communalWarehouseProject: ArchitectureProject = {
   },
   plans: [
     {
-      url: 'https://images.adsttc.com/media/images/5f87/a953/63c0/1777/3a00/07a1/large_jpg/4_Planta_Primer_Piso.jpg?1602726207',
-      alt: 'Planta Baixa do Primeiro Pavimento',
+      url: imagesPlan[0],
+      alt: 'Planta Baixa do Pavimento Térreo e Mezaninos',
       caption: 'Planta Baixa do Pavimento Térreo e Mezaninos',
       category: 'plans'
     },
     {
-      url: 'https://images.adsttc.com/media/images/5f87/aa1e/63c0/1777/3a00/07a7/large_jpg/6_Alzado.jpg?1602726410',
-      alt: 'Elevação Arquitetônica',
-      caption: 'Elevação e Seção Longitudinal',
+      url: imagesPlan[1],
+      alt: 'Planta Baixa do Mezanino Superior',
+      caption: 'Planta Baixa do Mezanino Superior',
+      category: 'plans'
+    },
+    {
+      url: imagesPlan[2],
+      alt: 'Corte Longitudinal A-A com tesouras de madeira',
+      caption: 'Corte Longitudinal',
+      category: 'plans'
+    },
+    {
+      url: imagesPlan[3],
+      alt: 'Corte Transversal B-B e jardins triangulares',
+      caption: 'Corte Transversal',
+      category: 'plans'
+    },
+    {
+      url: imagesPlan[4],
+      alt: 'Elevação Frontal da fachada na rua Manila',
+      caption: 'Elevação Frontal',
+      category: 'plans'
+    },
+    {
+      url: imagesPlan[5],
+      alt: 'Elevação Lateral e fundos do galpão',
+      caption: 'Elevação Lateral',
+      category: 'plans'
+    },
+    {
+      url: imagesPlan[6],
+      alt: 'Diagramas estruturais e detalhes dos mezaninos em abeto',
+      caption: 'Detalhes Estruturais e Mezaninos',
       category: 'plans'
     }
   ],
@@ -47,7 +116,7 @@ export const communalWarehouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/5f87/b354/63c0/1777/3a00/07d1/large_jpg/Alejandro_Arango__(18).jpg?1602728779',
+             url: images[1],
         alt: 'Área central do Armazém Comunitário com mezanino em madeira e cafeteria',
         span: 'col-span-2',
         category: 'photo'
@@ -64,12 +133,12 @@ export const communalWarehouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/5f87/b2a4/63c0/173b/c600/094c/large_jpg/Alejandro_Arango__(4).jpg?1602728604',
+          url: images[2],
           alt: 'Ambiente de trabalho coletivo com mesas compartilhadas e iluminação zenital',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/5f87/b36e/63c0/173b/c600/095a/large_jpg/Alejandro_Arango__(20).jpg?1602728804',
+          url: images[3],
           alt: 'Área de café e refeições sob os mezaninos de madeira',
           category: 'photo'
         }
@@ -84,7 +153,7 @@ export const communalWarehouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/5f87/b2d5/63c0/173b/c600/0950/large_jpg/Alejandro_Arango__(8).jpg?1602728652',
+        url: images[4],
         alt: 'Vista da altura dupla e das tesouras de madeira originais preservadas',
         span: 'col-span-2',
         category: 'photo'
@@ -101,12 +170,12 @@ export const communalWarehouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/5f87/b2c8/63c0/1777/3a00/07c5/large_jpg/Alejandro_Arango__(7).jpg?1602728640',
+          url: images[5],
           alt: 'Encontro entre a estrutura de madeira nova e as paredes pré-existentes',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/5f87/b31d/63c0/173b/c600/0956/large_jpg/Alejandro_Arango__(14).jpg?1602728725',
+          url: images[6],
           alt: 'Circulação no mezanino superior e visuais para o salão principal',
           category: 'photo'
         }
@@ -116,7 +185,7 @@ export const communalWarehouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/5f87/b298/63c0/1777/3a00/07c1/large_jpg/Alejandro_Arango__(3).jpg?1602728593',
+        url: images[7],
         alt: 'Jardins triangulares internos integrados às estações de coworking',
         span: 'col-span-2',
         category: 'photo'
@@ -131,7 +200,7 @@ export const communalWarehouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/5f87/b339/63c0/173b/c600/0958/large_jpg/Alejandro_Arango__(16).jpg?1602728748',
+        url: images[8],
         alt: 'Fachada do armazém na rua do bairro Manila',
         span: 'col-span-2',
         category: 'photo'

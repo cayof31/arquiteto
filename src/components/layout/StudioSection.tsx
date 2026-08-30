@@ -10,8 +10,9 @@ export default function StudioSection() {
           src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1920"
           alt="Studio"
           fill
-          className="object-cover"
           sizes="100vw"
+          quality={90}
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>

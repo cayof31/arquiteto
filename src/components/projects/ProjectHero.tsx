@@ -24,6 +24,8 @@ export default function ProjectHero({ title, location, year, coverImage }: Props
           alt={title}
           fill
           priority
+          sizes="100vw"
+          quality={90}
           className="object-cover"
         />
       </motion.div>

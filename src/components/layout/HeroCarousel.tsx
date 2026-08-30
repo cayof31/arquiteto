@@ -75,6 +75,8 @@ export default function HeroCarousel({ hero }: HeroCarouselProps) {
               src={src.coverImage}
               alt={`Projeto ${i + 1}`}
               fill
+              sizes="100vw"
+              quality={90}
               className="object-cover select-none"
               priority={i === 0}
               draggable={false}

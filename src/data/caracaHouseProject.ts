@@ -1,13 +1,28 @@
 import type { ArchitectureProject, ProjectImage } from '../types/project';
 
+export const images = [
+  "/projects/caracaHouse/01.jpg",
+  "/projects/caracaHouse/1.jpg",
+  "/projects/caracaHouse/2.jpg",
+  "/projects/caracaHouse/3.jpg",
+  "/projects/caracaHouse/4.jpg",
+  "/projects/caracaHouse/5.jpg",
+  "/projects/caracaHouse/6.jpg",
+  "/projects/caracaHouse/7.jpg",
+];
+
+export const imagesPlan = [
+  "/projects/caracaHouse/1_planta.jpg",
+  "/projects/caracaHouse/2_planta.jpg",
+];
+
 export const caracaHouseProject: ArchitectureProject = {
   slug: 'residencia-caraca-23-sul',
   title: 'Residência Caraçá',
   category: 'Residencial',
   year: 2023,
   location: 'São Paulo, Brasil',
-  coverImage:
-    'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33f0/large_jpg/0354.23Sul.CasaCaraca-PKOK3501P.jpg?1786993894',
+  coverImage: images[0],
   description:
     'Reforma residencial que amplia uma casa térrea pré-existente através de meios-níveis e escavação, revelando tesouras de madeira originais e integrando o convívio a um pátio central e nova edícula em tijolo maciço de reúso.',
   source: {
@@ -43,13 +58,13 @@ export const caracaHouseProject: ArchitectureProject = {
   },
   plans: [
     {
-      url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33f9/large_jpg/263_RCA_PE_XREF_R03-TERREO.jpg?1786993702',
+      url: imagesPlan[0],
       alt: 'Planta Baixa do Pavimento Térreo',
       caption: 'Planta Baixa - Pavimento Térreo e Pátio',
       category: 'plans'
     },
     {
-      url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33f8/large_jpg/263_RCA_PE_XREF_R03-PRIMEIRO_PAV.jpg?1786993689',
+      url: imagesPlan[1],
       alt: 'Planta Baixa do Primeiro Pavimento',
       caption: 'Planta Baixa - Mezanino e Suíte Superior',
       category: 'plans'
@@ -60,7 +75,7 @@ export const caracaHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33ea/large_jpg/0354.23Sul.CasaCaraca-PKOK3644P.jpg?1786993956',
+        url: images[1],
         alt: 'Interiores da Residência Caraçá com tesouras de madeira expostas',
         span: 'col-span-2',
         category: 'photo'
@@ -77,12 +92,12 @@ export const caracaHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33e5/large_jpg/0354.23Sul.CasaCaraca-KOKP7901ENR.jpg?1786993724',
+          url: images[2],
           alt: 'Sala de estar integrada com estante em marcenaria e estrutura aparente',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33e7/large_jpg/0354.23Sul.CasaCaraca-PKOK3365HP.jpg?1786993878',
+          url: images[3],
           alt: 'Sala de jantar sob a cobertura inclinada de madeira',
           category: 'photo'
         }
@@ -104,12 +119,12 @@ export const caracaHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33ef/large_jpg/0354.23Sul.CasaCaraca-PKOK3441P.jpg?1786993842',
+          url: images[4],
           alt: 'Escada de acesso ao mezanino e detalhe dos níveis intermediários',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33f3/large_jpg/0354.23Sul.CasaCaraca-PKOK3597P.jpg?1786993934',
+          url: images[5],
           alt: 'Dormitório da suíte com marcenaria sob medida e luz natural',
           category: 'photo'
         }
@@ -124,7 +139,7 @@ export const caracaHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33f1/large_jpg/0354.23Sul.CasaCaraca-PKOK3540P.jpg?1786993952',
+        url: images[6],
         alt: 'Abertura da área de refeições para o quintal e nova edícula',
         span: 'col-span-2',
         category: 'photo'
@@ -139,7 +154,7 @@ export const caracaHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a83/5c09/3cf9/6c00/0178/33eb/large_jpg/0354.23Sul.CasaCaraca-PKOK3727P.jpg?1786993984',
+        url: images[7],
         alt: 'Fachada da edícula com cobogós e paredes em tijolos maciços de reúso',
         span: 'col-span-2',
         category: 'photo'

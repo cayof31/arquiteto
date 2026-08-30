@@ -1,13 +1,28 @@
 import type { ArchitectureProject, ProjectImage } from '../types/project';
 
+export const images = [
+  "/projects/pracaHouse/01.jpg",
+  "/projects/pracaHouse/1.jpg",
+  "/projects/pracaHouse/2.jpg",
+  "/projects/pracaHouse/3.jpg",
+  "/projects/pracaHouse/4.jpg",
+  "/projects/pracaHouse/5.jpg",
+  "/projects/pracaHouse/6.jpg",
+  "/projects/pracaHouse/7.jpg",
+];
+
+export const imagesPlan = [
+  "/projects/pracaHouse/1_planta.jpg",
+  "/projects/pracaHouse/2_planta.jpg",
+];
+
 export const pracaHouseProject: ArchitectureProject = {
   slug: 'casa-praca-felipe-hess-arquitetos',
   title: 'Casa Praça',
   category: 'Residencial',
   year: 2023,
   location: 'São Paulo, Brasil',
-  coverImage:
-    'https://images.adsttc.com/media/images/6899/e204/a805/bb5c/ec3d/f4e3/large_jpg/casa-praca-felipe-hess-arquitetos_29.jpg?1754915345',
+  coverImage: images[0],
   description:
     'Implantada em um lote estreito de 10 x 60 metros no Jardim Paulistano, a residência se organiza em três blocos intercalados por pátios, criando uma casa longa, silenciosa e integrada à luz e ao paisagismo.',
   source: {
@@ -31,13 +46,13 @@ export const pracaHouseProject: ArchitectureProject = {
   },
   plans: [
     {
-      url: 'https://images.adsttc.com/media/images/6891/76b4/cb12/3860/35f7/a213/large_jpg/img-8597-1.jpg?1754363611',
+      url: imagesPlan[0],
       alt: 'Planta do Pavimento Térreo',
       caption: 'Planta do Pavimento Térreo',
       category: 'plans'
     },
     {
-      url: 'https://images.adsttc.com/media/images/6891/76b4/9a2f/b601/7e5e/8aa7/large_jpg/img-8598-2.jpg?1754363614',
+      url: imagesPlan[1],
       alt: 'Planta do Primeiro Andar',
       caption: 'Planta do Primeiro Andar',
       category: 'plans'
@@ -48,7 +63,7 @@ export const pracaHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6891/76b0/cb12/3860/35f7/a20c/large_jpg/casa-praca-felipe-hess-arquitetos_19.jpg?1754363651',
+        url: images[1],
         alt: 'Vista externa da Casa Praça e integração entre blocos e pátios',
         span: 'col-span-2',
         category: 'photo'
@@ -65,12 +80,12 @@ export const pracaHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6891/76b0/9a2f/b601/7e5e/8aa3/large_jpg/casa-praca-felipe-hess-arquitetos_7.jpg?1754363596',
+          url: images[2],
           alt: 'Varanda em concreto aparente e conexão com o pátio central',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6891/76b2/9a2f/b601/7e5e/8aa6/large_jpg/casa-praca-felipe-hess-arquitetos_25.jpg?1754363749',
+          url: images[3],
           alt: 'Circulação externa e transição de luz natural entre os volumes',
           category: 'photo'
         }
@@ -92,17 +107,17 @@ export const pracaHouseProject: ArchitectureProject = {
       columns: 3,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6891/76af/cb12/3860/35f7/a209/large_jpg/casa-praca-felipe-hess-arquitetos_5.jpg?1754363592',
+          url: images[4],
           alt: 'Living com sofá, painéis de madeira e iluminação intimista',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6891/76af/cb12/3860/35f7/a20a/large_jpg/casa-praca-felipe-hess-arquitetos_10.jpg?1754363596',
+          url: images[5],
           alt: 'Sala de jantar com mesa em madeira e cadeiras de design',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6891/76b0/cb12/3860/35f7/a20b/large_jpg/casa-praca-felipe-hess-arquitetos_3.jpg?1754363599',
+          url: images[6],
           alt: 'Detalhe da integração da sala de jantar com as esquadrias envidraçadas',
           category: 'photo'
         }
@@ -117,7 +132,7 @@ export const pracaHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6891/76b1/cb12/3860/35f7/a211/large_jpg/casa-praca-felipe-hess-arquitetos_24.jpg?1754363662',
+        url: images[7],
         alt: 'Varanda externa com pérgula e paisagismo integrado ao pátio',
         span: 'col-span-2',
         category: 'photo'

@@ -4,6 +4,10 @@ import ProjectHero from '../../../components/projects/ProjectHero';
 
 type Props = { params: Promise<{ slug: string }> };
 
+// blur 8x8 cinza claro — evita flash branco enquanto carrega com lazy
+const BLUR_PLACEHOLDER =
+  'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAALABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAA8A/9k=';
+
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
@@ -61,9 +65,13 @@ export default async function ProjectPage({ params }: Props) {
                   <Image
                     src={block.image.url}
                     alt={block.image.alt}
-                    width={1200}
-                    height={800}
-                    className="object-cover w-full h-full"
+                    sizes="100vw"
+                    quality={90}
+                    width={1920}
+                    height={1280}
+                    placeholder="blur"
+                    blurDataURL={BLUR_PLACEHOLDER}
+                    className="object-cover w-full h-auto"
                   />
                   {block.image.caption && (
                     <p className="text-sm text-zinc-500 mt-2 text-center">{block.image.caption}</p>
@@ -80,9 +88,13 @@ export default async function ProjectPage({ params }: Props) {
                       <Image
                         src={img.url}
                         alt={img.alt}
+                        sizes="(max-width:768px) 100vw, 50vw"
+                        quality={90}
+                        placeholder="blur"
+                        blurDataURL={BLUR_PLACEHOLDER}
                         width={1200}
                         height={800}
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-auto"
                       />
                       {img.caption && (
                         <p className="text-sm text-zinc-500 mt-2 text-center">{img.caption}</p>
@@ -109,6 +121,10 @@ export default async function ProjectPage({ params }: Props) {
                   <Image
                     src={plan.url}
                     alt={plan.alt}
+                    sizes="(max-width:768px) 100vw, 50vw"
+                    quality={90}
+                    placeholder="blur"
+                    blurDataURL={BLUR_PLACEHOLDER}
                     fill
                     className="object-contain"
                   />

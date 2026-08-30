@@ -14,7 +14,17 @@ export const images = [
   "/projects/drHouseProjects/10.jpg",
   "/projects/drHouseProjects/11.jpg",
   "/projects/drHouseProjects/12.jpg",
+  "/projects/drHouseProjects/13.jpg",
+  "/projects/drHouseProjects/14.jpg",
+  "/projects/drHouseProjects/15.jpg",
 ];
+
+
+export const imagesPlan = [
+  "/projects/drHouseProjects/1_planta.jpg",
+  "/projects/drHouseProjects/2_planta.jpg",  
+
+]
 
 export const drHouseProject: ArchitectureProject = {
   slug: 'dr-house-arc-architects',
@@ -57,13 +67,13 @@ export const drHouseProject: ArchitectureProject = {
   // Campo dedicado caso queira renderizar direto na seção escura no final da página
   plans: [
     {
-      url: 'https://images.adsttc.com/media/images/6a87/1bc9/ab59/ca01/8994/66c4/large_jpg/dr-house-archdaily-14-08-26-page-2-2-1.jpg?1787239450',
+      url: imagesPlan[0],
       alt: 'Planta Baixa do Primeiro Andar',
       caption: 'Planta do Primeiro Andar',
       category: 'plans'
     },
     {
-      url: 'https://images.adsttc.com/media/images/6a87/140e/ac8b/af01/892c/dcae/large_jpg/dr-house-archdaily-14-08-26-page-6-6.jpg?1787237484',
+      url: imagesPlan[1],
       alt: 'Diagrama Isométrico Seccional',
       caption: 'Diagrama Isométrico Seccional',
       category: 'plans'
@@ -74,7 +84,7 @@ export const drHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a87/1586/ab59/ca01/8994/664f/large_jpg/z-4-10.jpg?1787237866',
+        url: images[1],
         alt: 'Fachada externa e vista volumétrica da residência',
         span: 'col-span-2',
         category: 'photo'
@@ -91,12 +101,12 @@ export const drHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1585/ac8b/af01/892c/dcc0/large_jpg/z-9-11.jpg?1787237833',
+          url: images[2],
           alt: 'Pátio interno e paisagismo integrado',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1588/ab59/ca01/8994/6650/large_jpg/z-10-12.jpg?1787237803',
+          url: images[3],
           alt: 'Circulação e transição entre espaços internos e externos',
           category: 'photo'
         }
@@ -111,7 +121,7 @@ export const drHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a87/1580/ab59/ca01/8994/6649/large_jpg/03-11-2.jpg?1787237776',
+        url: images[4],
         alt: 'Fachada oeste com elementos de proteção solar',
         span: 'col-span-2',
         category: 'photo'
@@ -128,12 +138,12 @@ export const drHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1585/ab59/ca01/8994/664d/large_jpg/z-15-14.jpg?1787237799',
+          url: images[5],
           alt: 'Vista da piscina e área de lazer externa',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1586/ab59/ca01/8994/664e/large_jpg/z-31-17.jpg?1787237796',
+          url: images[6],
           alt: 'Conexão dos ambientes internos com o deque',
           category: 'photo'
         }
@@ -155,12 +165,12 @@ export const drHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1588/ab59/ca01/8994/6651/large_jpg/z-37-21.jpg?1787237802',
+          url: images[7],
           alt: 'Detalhe do acabamento em pedra e forro de madeira',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1589/ab59/ca01/8994/6652/large_jpg/z-33-18.jpg?1787237838',
+          url: images[8],
           alt: 'Fachada posterior voltada ao jardim',
           category: 'photo'
         }
@@ -177,12 +187,12 @@ export const drHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a87/157e/ab59/ca01/8994/6646/large_jpg/z-43-26.jpg?1787237790',
+          url: images[9],
           alt: 'Interiores com esquadrias do chão ao teto',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1589/ac8b/af01/892c/dcc3/large_jpg/z-42-25.jpg?1787237804',
+          url: images[10],
           alt: 'Sala de estar com vista contínua para os pátios',
           category: 'photo'
         }
@@ -197,7 +207,7 @@ export const drHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a87/1581/ab59/ca01/8994/664a/large_jpg/09-7-8.jpg?1787237775',
+        url: images[11],
         alt: 'Estúdio principal com pé-direito duplo e living integrado',
         span: 'col-span-2',
         category: 'photo'
@@ -214,12 +224,12 @@ export const drHouseProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1583/ab59/ca01/8994/664b/large_jpg/z-41-24.jpg?1787237799',
+          url: images[12],
           alt: 'Área do spa interno com vista para o pátio',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a87/1589/ac8b/af01/892c/dcc4/large_jpg/z-49-28.jpg?1787237805',
+          url: images[13],
           alt: 'Cozinha e área de jantar integradas',
           category: 'photo'
         }
@@ -234,7 +244,7 @@ export const drHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a87/1580/ac8b/af01/892c/dcbc/large_jpg/z-17-15.jpg?1787237793',
+        url: images[14],
         alt: 'Quarto principal com varanda privativa',
         category: 'photo'
       }
@@ -248,7 +258,7 @@ export const drHouseProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a87/158a/ab59/ca01/8994/6653/large_jpg/04-11-3.jpg?1787237792',
+        url: images[15],
         alt: 'Vista crepuscular da casa e piscina integrada ao jardim',
         span: 'col-span-2',
         category: 'photo'

@@ -1,13 +1,32 @@
 import type { ArchitectureProject, ProjectImage } from '../types/project';
 
+export const images = [
+  "/projects/hideoutLeafHouse/01.jpg",
+  "/projects/hideoutLeafHouse/1.jpg",
+  "/projects/hideoutLeafHouse/2.jpg",
+  "/projects/hideoutLeafHouse/3.jpg",
+  "/projects/hideoutLeafHouse/4.jpg",
+  "/projects/hideoutLeafHouse/5.jpg",
+  "/projects/hideoutLeafHouse/6.jpg",
+  "/projects/hideoutLeafHouse/7.jpg",
+  "/projects/hideoutLeafHouse/8.jpg",
+  "/projects/hideoutLeafHouse/9.jpg",
+  "/projects/hideoutLeafHouse/10.jpg",
+  "/projects/hideoutLeafHouse/11.jpg",
+];
+
+export const imagesPlan = [
+  "/projects/hideoutLeafHouse/1_planta.jpg",
+  "/projects/hideoutLeafHouse/2_planta.jpg",
+];
+
 export const hideoutLeafProject: ArchitectureProject = {
   slug: 'hideout-leaf-villa-pablo-luna-studio',
   title: 'Hideout Leaf Villa',
   category: 'Hospitalidade',
   year: 2026,
   location: 'Sidemen, Indonésia',
-  coverImage:
-    'https://images.adsttc.com/media/images/6a7d/b70a/ab59/ca01/8994/4d4d/large_jpg/hideout-leaf-villa-pablo-luna-studio_29.jpg?1786623772',
+  coverImage: images[0],
   description:
     'Villa ecológica imersa na selva montanhosa de Bali, inspirada na queda orgânica de quatro folhas que formam coberturas esculturais em bambu, integrando espaços abertos, vidro curvo e ventilação passiva.',
   source: {
@@ -39,13 +58,13 @@ export const hideoutLeafProject: ArchitectureProject = {
   },
   plans: [
     {
-      url: 'https://images.adsttc.com/media/images/6a7b/1640/ac8b/af01/892c/bc59/large_jpg/1-28.jpg?1786451538',
+      url: imagesPlan[0],
       alt: 'Planta Baixa do Primeiro Andar',
       caption: 'Planta Baixa do Pavimento Principal',
       category: 'plans'
     },
     {
-      url: 'https://images.adsttc.com/media/images/6a7b/163f/ac8b/af01/892c/bc58/large_jpg/6-33.jpg?1786451541',
+      url: imagesPlan[1],
       alt: 'Corte Arquitetônico Longitudinal',
       caption: 'Corte Arquitetônico e Esquema de Coberturas',
       category: 'plans'
@@ -56,7 +75,7 @@ export const hideoutLeafProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a7b/15c2/ac8b/af01/892c/bc4d/large_jpg/hideout-leaf-house-pablo-luna-studio_1.jpg?1786451437',
+        url: images[1],
         alt: 'Vista externa da Hideout Leaf Villa integrada à selva tropical',
         span: 'col-span-2',
         category: 'photo'
@@ -71,7 +90,7 @@ export const hideoutLeafProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a7b/15c4/ab59/ca01/8994/45cf/large_jpg/hideout-leaf-house-pablo-luna-studio_19.jpg?1786451438',
+        url: images[2],
         alt: 'Detalhe da estrutura de bambu curvado e beiral sobre a floresta',
         span: 'col-span-2',
         category: 'photo'
@@ -88,12 +107,12 @@ export const hideoutLeafProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15c5/ab59/ca01/8994/45d2/large_jpg/hideout-leaf-house-pablo-luna-studio_23.jpg?1786451438',
+          url: images[3],
           alt: 'Interiores com iluminação intimista e marcenaria em bambu',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15cf/ac8b/af01/892c/bc57/large_jpg/hideout-leaf-house-pablo-luna-studio_3.jpg?1786451425',
+          url: images[4],
           alt: 'Volume externo e telhados orgânicos sobrepostos',
           category: 'photo'
         }
@@ -110,12 +129,12 @@ export const hideoutLeafProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15c1/ab59/ca01/8994/45ce/large_jpg/hideout-leaf-house-pablo-luna-studio_4.jpg?1786451416',
+          url: images[5],
           alt: 'Encontro dos telhados em balanço e claraboias naturais',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15cb/ab59/ca01/8994/45d6/large_jpg/hideout-leaf-house-pablo-luna-studio_16.jpg?1786451426',
+          url: images[6],
           alt: 'Detalhe da estrutura de bambu e entrada de luz natural',
           category: 'photo'
         }
@@ -135,7 +154,7 @@ export const hideoutLeafProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a7b/15cc/ab59/ca01/8994/45d7/large_jpg/hideout-leaf-house-pablo-luna-studio_25.jpg?1786451424',
+        url: images[7],
         alt: 'Área de convivência sob a estrutura central de bambu',
         span: 'col-span-2',
         category: 'photo'
@@ -152,12 +171,12 @@ export const hideoutLeafProject: ArchitectureProject = {
       columns: 2,
       images: [
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15c4/ab59/ca01/8994/45d0/large_jpg/hideout-leaf-house-pablo-luna-studio_22.jpg?1786451454',
+          url: images[8],
           alt: 'Dormitório fechado por vidros curvos com vista panorâmica',
           category: 'photo'
         },
         {
-          url: 'https://images.adsttc.com/media/images/6a7b/15c7/ab59/ca01/8994/45d3/large_jpg/hideout-leaf-house-pablo-luna-studio_26.jpg?1786451418',
+          url: images[9],
           alt: 'Banheiro integrado com pedra natural e piso de calcário',
           category: 'photo'
         }
@@ -172,7 +191,7 @@ export const hideoutLeafProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a7b/15cc/ab59/ca01/8994/45d8/large_jpg/hideout-leaf-house-pablo-luna-studio_11.jpg?1786451442',
+        url: images[10],
         alt: 'Detalhes construtivos dos encaixes de bambu e acabamento mineral',
         span: 'col-span-2',
         category: 'photo'
@@ -187,7 +206,7 @@ export const hideoutLeafProject: ArchitectureProject = {
     {
       type: 'image',
       image: {
-        url: 'https://images.adsttc.com/media/images/6a7b/15bf/ac8b/af01/892c/bc4a/large_jpg/hideout-leaf-house-pablo-luna-studio_7.jpg?1786451409',
+        url: images[11],
         alt: 'Vista poética da vila camuflada na copa das árvores ao entardecer',
         span: 'col-span-2',
         category: 'photo'
