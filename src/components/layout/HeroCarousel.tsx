@@ -76,9 +76,9 @@ export default function HeroCarousel({ hero }: HeroCarouselProps) {
               alt={`Projeto ${i + 1}`}
               fill
               sizes="100vw"
-              // quality={90}
+              quality={90}
+              priority
               className="object-cover select-none"
-              priority={i === 0}
               draggable={false}
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-transparent pointer-events-none" />

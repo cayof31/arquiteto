@@ -85,10 +85,10 @@ const peekRatio = -5; // % da largura de um slide que sobra do anterior ao fim
               </div>
 
               <div className="pl-8 md:pl-24 max-w-9/12 text-white">
-                <span className="text-4xl md:text-9xl font-serif font-bold text-white/10 block mb-3 md:mb-4 select-none">
+                <span className="text-4xl md:text-9xl font-serif font-bold text-white block mb-3 md:mb-4 select-none">
                   {m.year}
                 </span>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-white/40 mb-3 font-medium">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/60 mb-3 font-medium">
                   {m.subtitle}
                 </p>
                 <h2 className="text-2xl md:text-7xl font-serif leading-tight mb-3 md:mb-6">

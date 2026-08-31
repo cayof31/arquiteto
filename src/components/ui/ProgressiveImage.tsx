@@ -22,7 +22,8 @@ export default function ProgressiveImage({ src, alt, width, height, fill, sizes,
     src,
     alt,
     sizes,
-    quality: 75,
+    quality: 50,
+    priority,
     ...(fill ? { fill: true as const } : { width: width!, height: height! }),
   };
 
@@ -32,7 +33,6 @@ export default function ProgressiveImage({ src, alt, width, height, fill, sizes,
     sizes,
     quality: 90,
     ...(fill ? { fill: true as const } : { width: width!, height: height! }),
-    priority,
     onLoad: () => setLoaded(true),
   };
 

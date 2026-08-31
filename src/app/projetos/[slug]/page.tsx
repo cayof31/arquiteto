@@ -65,6 +65,7 @@ export default async function ProjectPage({ params }: Props) {
                     width={1920}
                     height={1280}
                     sizes="100vw"
+                    priority={i < 3}
                     className="object-cover w-full h-auto"
                   />
                   {block.image.caption && (
@@ -85,6 +86,7 @@ export default async function ProjectPage({ params }: Props) {
                         width={1200}
                         height={800}
                         sizes="(max-width:768px) 100vw, 50vw"
+                        priority={i < 3}
                         className="object-cover w-full h-auto"
                       />
                       {img.caption && (
