@@ -52,7 +52,7 @@ export default function TimelineSection() {
     offset: ['start start', 'end end'],
   });
 
-const peekRatio = -5; // % da largura de um slide que sobra do anterior ao fim
+const peekRatio = -6; // % da largura de um slide que sobra do anterior ao fim
   const finalShift = (milestones.length - 1) * 100 - peekRatio;
 
   const x = useTransform(

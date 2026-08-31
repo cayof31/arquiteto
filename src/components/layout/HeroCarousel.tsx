@@ -81,7 +81,7 @@ export default function HeroCarousel({ hero }: HeroCarouselProps) {
               className="object-cover select-none"
               draggable={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-transparent pointer-events-none " />
             <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-transparent to-transparent pointer-events-none h-1/2" />
             <div className='h-dvh relative w-full flex items-end snap-start p-10'>
               <div className="pb-12 px-6 md:px-12 text-white">
