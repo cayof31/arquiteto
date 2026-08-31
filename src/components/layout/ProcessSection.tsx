@@ -67,6 +67,8 @@ export default function ProcessSection() {
                 className="object-cover"
                 priority
               />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent to-transparent pointer-events-none h-1/2" />
+
             </motion.div>
           </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
