@@ -23,8 +23,8 @@ export default function ContactSection() {
   }, [state.status]);
 
   return (
-    <section id="contato" className='min-h-screen'>
-      <div className="relative w-full flex items-center justify-center snap-start bg-white">
+    <section id="contato" className='min-h-screen flex flex-col justify-between'>
+      <div className="relative w-full flex items-center mt-5 md:mt-20 lg:mt-30 justify-center snap-start bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -9,7 +9,7 @@ const milestones = [
     title: 'Fundação do Estúdio',
     subtitle: 'O início de uma trajetória',
     image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920',
+      '/projects/drHouseProjects/1.jpg',
     description:
       'Em 2010, nascia o Studio Vértice com a convicção de que arquitetura é mais que construir — é criar experiências que transformam lugares e pessoas.',
   },
@@ -17,8 +17,8 @@ const milestones = [
     year: '2013',
     title: 'Primeira Obra de Destaque',
     subtitle: 'Casa Brutalista na Colina',
-    image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=1920',
+    image:      '/projects/caracaHouse/1.jpg',
+
     description:
       'O projeto que definiu nossa linguagem: concreto aparente, integração com o relevo e balanços ousados. Publicado em revistas nacionais e internacionais.',
   },
@@ -27,7 +27,8 @@ const milestones = [
     title: 'Prêmio Internacional',
     subtitle: 'Reconhecimento mundial',
     image:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920',
+      '/projects/pracaHouse/1.jpg',
+
     description:
       'Recebemos o prêmio de Melhor Projeto Comercial pelo Pavilhão Metálico, consolidando nossa atuação no mercado institucional e corporativo.',
   },
@@ -35,8 +36,8 @@ const milestones = [
     year: '2024',
     title: 'Hoje',
     subtitle: 'Mais de 60 projetos realizados',
-    image:
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=80&w=1920',
+    image:      '/projects/hideoutLeafHouse/1.jpg',
+
     description:
       'Com uma equipe multidisciplinar e projetos em quatro estados, seguimos explorando os limites entre técnica, materialidade e sensibilidade humana.',
   },
@@ -52,16 +53,16 @@ export default function TimelineSection() {
     offset: ['start start', 'end end'],
   });
 
-const peekRatio = -6; // % da largura de um slide que sobra do anterior ao fim
-  const finalShift = (milestones.length - 1) * 100 - peekRatio;
+// const peekRatio = -6; // % da largura de um slide que sobra do anterior ao fim
+  const finalShift = (milestones.length - 1) * 100
 
   const x = useTransform(
     scrollYProgress,
-    [0, 0.75, 1],
-    ['0%', `-${finalShift}%`, `-${finalShift}%`]
+    [0, 1],
+    ['0%', `-${finalShift}%`]
   );
 
-  const lineWidth = useTransform(scrollYProgress, [0, 0.75, 1], ['0%', '100%', '100%']);
+  const lineWidth = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
   return (
     <section ref={sectionRef} className="relative" style={{ height: `${sectionHeight}vh` }}>
@@ -70,7 +71,7 @@ const peekRatio = -6; // % da largura de um slide que sobra do anterior ao fim
           {milestones.map((m, i) => (
             <div
               key={i}
-              className="min-w-full w-[102%] h-dvh relative flex items-center shrink-0 snap-start"
+              className="min-w-full w-full h-dvh relative flex items-center shrink-0 snap-start"
             >
               <div className="absolute inset-0 -z-10">
                 <Image
