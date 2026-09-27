@@ -1,6 +1,6 @@
 "use client";
 // 1. Importe os hooks modernos do React 19
-import { useActionState, useEffect, useRef } from 'react';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import Footer from './Footer';
 import { sendContactEmail } from '@/app/actions/send-email'
@@ -12,13 +12,19 @@ export default function ContactSection() {
     status: "idle", 
     message: "" 
   });
-  
+  const [iniciadoEm, setIniciadoEm] = useState("");
+
   // Referência para limparmos o form após o sucesso
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
+    setIniciadoEm(String(Date.now()));
+  }, []);
+
+  useEffect(() => {
     if (state.status === "success") {
       formRef.current?.reset();
+      setIniciadoEm(String(Date.now()));
     }
   }, [state.status]);
 
@@ -43,6 +49,18 @@ export default function ContactSection() {
           {/* 3. A mágica acontece aqui: action={formAction} */}
           <form ref={formRef} action={formAction} className="space-y-8">
             <div>
+              <div className="sr-only" aria-hidden="true">
+                <label htmlFor="contato-website">Website</label>
+                <input
+                  id="contato-website"
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
+              </div>
+              <input type="hidden" name="iniciadoEm" value={iniciadoEm} readOnly />
               <label className="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Nome</label>
               <input type="text" name="nome" required className="w-full border-b border-zinc-300 pb-3 bg-transparent outline-none focus:border-zinc-900 transition-colors" placeholder="Seu nome" />
             </div>
